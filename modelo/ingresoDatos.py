@@ -1,4 +1,5 @@
 #se presentan las fuciones que permitiran almacenar el dicionario de grupos.
+from persistencia.pesistenciaGuardar import guardar
 
 def leerSgla():
     while True: #validar que se ha ingresado un valor 
@@ -36,7 +37,7 @@ def leercodigo():
 
 
 
-def registroGrupos():
+def registroGrupos(grup, datagrup):
     print("Registrar Grupo")
     cod = leercodigo()
     if cod not in grup: # si el codigo no esta en la libreria entonces lo guardara, si esta enviara al else
