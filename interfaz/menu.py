@@ -1,3 +1,5 @@
+
+
 def menu():
     while True:
         print("** MENU**")
@@ -12,12 +14,17 @@ def menu():
         print("i. Salida del sistema.")
 
         print(">> Ingresar a opcion: ", end="")
-        
         try:
-            opcion = input(lower())
-            if 
-            pass
+            opciones = ["a", "b", "c","d","e","f", "g", "h", "i"]
+            opc = input().lower()
+            if opc is not opciones:
+                print("Error opcion invalida")
+                print("presione cualquier tecla para volver al menu")
+            return opc
+        
         except ValueError:
-            print("Error opcion invalida")
-            print("ingrese cualquier tecla para volver al menu")
+            print("ingreso una opcion incorrecta")
+            print("presione cualquier tecla para volver al menu")
+         
+
             
