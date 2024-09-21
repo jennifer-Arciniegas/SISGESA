@@ -1,5 +1,5 @@
 from interfaz.menu import menu
-
+from modelo.ingresoDatos import registroGrupos
 
 print(menu())
 
