@@ -17,7 +17,7 @@ def menu():
         try:
             opciones = ["a", "b", "c","d","e","f", "g", "h", "i"]
             opc = input().lower()
-            if opc is not opciones:
+            if opc not in opciones:
                 print("Error opcion invalida")
                 print("presione cualquier tecla para volver al menu")
             return opc
