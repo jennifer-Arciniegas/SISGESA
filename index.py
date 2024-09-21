@@ -1,7 +1,7 @@
 from interfaz.menu import menu
-from modelo.ingresoDatos import registroGrupos
+from modelo.ingresoDatos_grupo import registroGrupos
 
-print(menu())
+
 
 
 

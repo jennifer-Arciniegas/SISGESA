@@ -9,8 +9,8 @@ def leerSgla():
                 print("Error. Codigo invalido")
                 continue
             return sigla
-        except Exception: #valida cualquier error
-            print("Error al ingresar el codigo")
+        except Exception as e: #valida cualquier error
+            print("Error al ingresar el codigo" + e)
 
 
 def leerNombre():
@@ -21,24 +21,25 @@ def leerNombre():
                 print("Error. Codigo invalido")
                 continue
             return name 
-        except Exception: #valida cualquier error
-            print("Error al ingresar el codigo")
+        except Exception as e: #valida cualquier error
+            print("Error al ingresar el codigo" + e)
 
 def leercodigo():
     while True: #validar que se ha ingresado un valor 
         try:
-            cod = int(input("Codigo del grupo: \n"))
+            cod = input("Codigo del grupo: \n")
             if len(cod.strip()) == 0: 
                 print("Error. Codigo invalido")
                 continue
             return cod 
-        except Exception: #valida cualquier error
-            print("Error al ingresar el codigo")
+        except Exception as e: #valida cualquier error
+            print("Error al ingresar el codigo" + e)
 
 
 
 def registroGrupos(grup, datagrup):
-    print("Registrar Grupo")
+    print("**Registrar Grupo**")
+    print("___________________")
     cod = leercodigo()
     if cod not in grup: # si el codigo no esta en la libreria entonces lo guardara, si esta enviara al else
         nombre = leerNombre()

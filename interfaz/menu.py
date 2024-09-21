@@ -19,12 +19,12 @@ def menu():
             opc = input().lower()
             if opc not in opciones:
                 print("Error opcion invalida")
-                print("presione cualquier tecla para volver al menu")
+                print("presione cualquier tecla para volver al menu. \n")
             return opc
         
         except ValueError:
             print("ingreso una opcion incorrecta")
-            print("presione cualquier tecla para volver al menu")
+            print("presione cualquier tecla para volver al menu. \n")
          
 
             
