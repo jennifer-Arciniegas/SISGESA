@@ -19,7 +19,7 @@ def cargar(arch):
             if not fd.closed():
                 fd.close()
         except Exception as e:
-           print("El archivo no extiste")
+           print("El archivo no extiste")  
     else:
         print("Error. el archivo no existe")
         print("Presione cualquier tecla para volver al menu. \n")
