@@ -1,4 +1,4 @@
-
+from persistencia.pesistenciaGuardar import guardar
 """ estructura
 modulo = {
     codigo1(str):{
@@ -13,8 +13,13 @@ modulo = {
 
 }
 """
+def leerCodigo():
+    while True:
+        try:
+            
 
-from SISGESA.persistencia.pesistenciaGuardar import guardar
+    
+
 
 
 def R_modulos (registro, arch):
@@ -35,33 +40,9 @@ def R_modulos (registro, arch):
 
 
     else:
+         print("El modulo ya esta registrado")
         
-
-    
-
-
-
-
-
-def Re_estudiantes(registro, arch):
-    print("\n\n ** Registrar Estudiante **")
-    cod = leerCodigo()
-    if cod not in registro:
-        nombre = leerNombre()
-        sexo = leerSexo()
-        edad = leerEdad()
-
-        datEstudiante={
-            "Nombre": nombre,
-            "Sexo": sexo,
-            "Edad": edad
-        }
-
-        registro[cod] =datEstudiante
-        registro = dict(sorted(registro.items()))
-        guardar(registro)
-    else:
-        print("El estudiante ya esta registrado")
-
     input("Precione cualquier tecla para volver al menu. \n")
     guardar(registro)
+
+    

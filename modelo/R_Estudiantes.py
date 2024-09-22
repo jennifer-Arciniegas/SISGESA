@@ -1,5 +1,5 @@
 
-from SISGESA.persistencia.pesistenciaGuardar import guardar
+from persistencia.pesistenciaGuardar import guardar
 """ estructura
 estudiante = {
     codigo1(str):{
