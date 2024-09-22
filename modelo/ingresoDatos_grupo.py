@@ -4,7 +4,7 @@ from persistencia.pesistenciaGuardar import guardar
 def leerSgla():
     while True: #validar que se ha ingresado un valor 
         try:
-            sigla = int(input("Codigo del grupo: \n"))
+            sigla = input("Codigo del grupo: \n")
             if len(sigla.strip()) == 0: 
                 print("Error. Codigo invalido")
                 continue
@@ -16,7 +16,7 @@ def leerSgla():
 def leerNombre():
      while True: #validar que se ha ingresado un valor 
         try:
-            name = int(input("Codigo del grupo: \n"))
+            name = input("Codigo del grupo: \n")
             if len(name.strip()) == 0: 
                 print("Error. Codigo invalido")
                 continue

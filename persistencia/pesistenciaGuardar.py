@@ -3,7 +3,7 @@ from pathlib import Path
 
 
 def guardar(grup, arch):
-    with open("archivo/cuenta.json", "w") as fd:
+    with open("SISGESA\archivo\cuenta.json", "w") as fd:
         json.dump(grup,fd)
     
     if fd.closed:
@@ -19,7 +19,7 @@ def cargar(arch):
             if not fd.closed():
                 fd.close()
         except Exception as e:
-           print("El archivo no extiste")  
+           print("El archivo no extiste" + e)  
     else:
         print("Error. el archivo no existe")
         print("Presione cualquier tecla para volver al menu. \n")
