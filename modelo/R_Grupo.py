@@ -1,5 +1,6 @@
+from persistencia.pesistenciaGuardar import guardarCursos
 #se presentan las fuciones que permitiran almacenar el dicionario de grupos.
-from persistencia.pesistenciaGuardar import guardar
+
 
 def leerSgla():
     while True: #validar que se ha ingresado un valor 
@@ -10,7 +11,7 @@ def leerSgla():
                 continue
             return sigla
         except Exception as e: #valida cualquier error
-            print("Error al ingresar el codigo" + e)
+            print("Error al ingresar el codigo", e)
 
 
 def leerNombre():
@@ -22,7 +23,7 @@ def leerNombre():
                 continue
             return name 
         except Exception as e: #valida cualquier error
-            print("Error al ingresar el codigo" + e)
+            print("Error al ingresar el codigo", e)
 
 def leercodigo():
     while True: #validar que se ha ingresado un valor 
@@ -33,7 +34,7 @@ def leercodigo():
                 continue
             return cod 
         except Exception as e: #valida cualquier error
-            print("Error al ingresar el codigo" + e)
+            print("Error al ingresar el codigo", e)
 
 
 
@@ -52,8 +53,8 @@ def registroGrupos(grup, datagrup):
 
         grup[cod] = datgrup   #cod es el codigo y en datagrup estan los valores de esa llave 
         grup = dict(sorted(grup.items())) #ordena los valores ingresados 
-
-        guardar(grup)
+        guardarCursos()
+        
     else:
         print("El codigo ya esta registrado, por lo tanto el grupo ya esta registrado")
         print("ingrese cualquier tecla para volver al menu. \n")

@@ -1,5 +1,4 @@
 
-from persistencia.pesistenciaGuardar import guardar
 """ estructura
 estudiante = {
     codigo1(str):{
@@ -78,11 +77,11 @@ def Re_estudiantes(registro, arch):
 
         registro[cod] =datEstudiante
         registro = dict(sorted(registro.items()))
-        guardar(registro)
+     
     else:
         print("El estudiante ya esta registrado")
 
     input("Precione cualquier tecla para volver al menu. \n")
-    guardar(registro)
+
 
 
