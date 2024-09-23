@@ -1,0 +1,15 @@
+{ "docentes" : [ {
+    "Cedula": "19844283491",
+    "Nombre": "Luis  Lopez"
+}, {
+    "Cedula": "1234567890",
+    "Nombre": "Carlos Mantilla"
+}, {
+    "Cedula": "1234267292",
+    "Nombre": "Alejandra  Bonilla"
+}, {
+    "Cedula": "32343672392",
+    "Nombre": "Marcela  Perez"
+}
+
+]}

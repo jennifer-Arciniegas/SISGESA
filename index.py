@@ -1,10 +1,11 @@
 from interfaz.menu import menu
 from modelo.ingresoDatos_grupo import registroGrupos
 from modelo.R_Estudiantes import Re_estudiantes
+from modelo.R_modulos import R_modulos
 
 
 
-
+modulos = {}
 estudiante={}
 grupos= {}
 archivo ="SISGESA\archivo\cuenta.json"
@@ -15,7 +16,7 @@ while True:
         case "a":
             grupos = registroGrupos(grupos, archivo)
         case "b":
-            modulos = registroModulos(modulos, archivo)
+            modulos = R_modulos(modulos, archivo)
         case "c":
             estudiante = Re_estudiantes(estudiante, archivo)
         case "d":
