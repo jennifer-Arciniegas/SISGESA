@@ -1,0 +1,18 @@
+{
+    "grupos": [
+        [
+            {
+                "codigo": "er23",
+                "nombre": "dfa",
+                "sigla": "aaa"
+            }
+        ],
+        [
+            {
+                "codigo": "sdf323",
+                "nombre": "C4",
+                "sigla": "C"
+            }
+        ]
+    ]
+}

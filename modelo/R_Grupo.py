@@ -1,63 +1,54 @@
-from persistencia.pesistenciaGuardar import guardarCursos
-#se presentan las fuciones que permitiran almacenar el dicionario de grupos.
-
+grup = []
 
 def leerSgla():
-    while True: #validar que se ha ingresado un valor 
+    while True: 
         try:
-            sigla = input("Codigo del grupo: \n")
+            sigla = input("SIGLA del grupo: \n")
             if len(sigla.strip()) == 0: 
                 print("Error. Codigo invalido")
                 continue
             return sigla
-        except Exception as e: #valida cualquier error
+        except Exception as e:
             print("Error al ingresar el codigo", e)
 
-
 def leerNombre():
-     while True: #validar que se ha ingresado un valor 
+    while True: 
         try:
-            name = input("Codigo del grupo: \n")
+            name = input("Nombre del grupo: \n")
             if len(name.strip()) == 0: 
                 print("Error. Codigo invalido")
                 continue
             return name 
-        except Exception as e: #valida cualquier error
+        except Exception as e:
             print("Error al ingresar el codigo", e)
 
 def leercodigo():
-    while True: #validar que se ha ingresado un valor 
+    while True: 
         try:
             cod = input("Codigo del grupo: \n")
-            if len(cod.strip()) == 0: 
-                print("Error. Codigo invalido")
+            if len(cod.strip()) == 0:
+                print("Error, ingrese un codigo") 
                 continue
-            return cod 
-        except Exception as e: #valida cualquier error
+            return cod
+        except Exception as e:
             print("Error al ingresar el codigo", e)
 
-
-
-def registroGrupos(grup, datagrup):
+def registroGrupos():
+    global grup  # Indicar que queremos modificar la variable global
     print("**Registrar Grupo**")
     print("___________________")
     cod = leercodigo()
-    if cod not in grup: # si el codigo no esta en la libreria entonces lo guardara, si esta enviara al else
+    if not any(grupo['codigo'] == cod for grupo in grup):  # Verificar si el código ya existe
         nombre = leerNombre()
         sigla = leerSgla()
 
         datgrup = {
+            "codigo": cod,
             "nombre": nombre,
             "sigla": sigla
         }
-
-        grup[cod] = datgrup   #cod es el codigo y en datagrup estan los valores de esa llave 
-        grup = dict(sorted(grup.items())) #ordena los valores ingresados 
-        guardarCursos()
-        
+        grup.append(datgrup)
+        grup.sort(key=lambda x: x['codigo'])  # Ordenar la lista por el código del grupo
     else:
-        print("El codigo ya esta registrado, por lo tanto el grupo ya esta registrado")
-        print("ingrese cualquier tecla para volver al menu. \n")
-
-    return grup 
-
+        print("El código ya existe.")
+    return grup

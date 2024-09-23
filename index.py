@@ -1,6 +1,8 @@
 from interfaz.menu import menu
 from modelo.R_Grupo import registroGrupos
 from modelo.R_Estudiantes import Re_estudiantes
+from persistencia.pesistenciaGuardar import guardar
+from modelo.R_Modulo import registroModulo
 
 
 
@@ -14,9 +16,9 @@ while True:
     opc = menu()
     match opc:
         case "a":
-            grupos = registroGrupos(grupos, archivo)
+            guardar(registroGrupos(),"grupos") 
         case "b":
-            modulos = R_modulos(modulos, archivo)
+            guardar(registroModulo(), "Modulo")
         case "c":
             estudiante = Re_estudiantes(estudiante, archivo)
         case "d":
