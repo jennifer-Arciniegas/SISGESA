@@ -1,18 +1,14 @@
 {
-    "grupos": [
-        [
-            {
-                "codigo": "er23",
-                "nombre": "dfa",
-                "sigla": "aaa"
-            }
-        ],
-        [
-            {
-                "codigo": "sdf323",
-                "nombre": "C4",
-                "sigla": "C"
-            }
-        ]
-    ]
+    "grupos": {
+        "h2": {
+            "codigo": "h2",
+            "nombre": "hola",
+            "sigla": "hl"
+        },
+        "h3": {
+            "codigo": "h3",
+            "nombre": "hoola",
+            "sigla": "hlll"
+        }
+    }
 }

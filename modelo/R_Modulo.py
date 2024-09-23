@@ -1,5 +1,3 @@
-modulo = []
-
 def leerDuracion():
     while True: 
         try:
@@ -30,22 +28,22 @@ def leercodigo():
         except Exception as e:
             print("Error al ingresar el codigo", e)
 
-def registroModulo():
-    global modulo  # Indicar que queremos modificar la variable global
+def registroModulo(datos):
     print("**Registrar Modulo**")
     print("___________________")
     cod = leercodigo()
-    if not any(grupo['codigo'] == cod for grupo in modulo):  # Verificar si el código ya existe
+    if cod not in datos:
         nombre = leerNombre()
         duracion = leerDuracion()
 
-        datgrup = {
+        modelDat = {
             "codigo": cod,
             "nombre": nombre,
             "Duracion": duracion
         }
-        modulo.append(datgrup) #agrega al final de la lista el registro 
-        modulo.sort(key=lambda x: x['codigo'])  # Ordenar la lista por el código del grupo
+        datos[cod] = modelDat
+        print(f"{cod} registrado correctamente.")
+
     else:
-        print("El código ya existe.")
-    return modulo
+        print(f"El código {cod} ya existe en el sistema.")
+    return datos

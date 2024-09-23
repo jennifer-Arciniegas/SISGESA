@@ -1,54 +1,55 @@
-grup = []
-
 def leerSgla():
     while True: 
         try:
             sigla = input("SIGLA del grupo: \n")
             if len(sigla.strip()) == 0: 
-                print("Error. Codigo invalido")
+                print("Error. Sigla inválida")
                 continue
             return sigla
         except Exception as e:
-            print("Error al ingresar el codigo", e)
+            print("Error al ingresar la sigla", e)
 
 def leerNombre():
     while True: 
         try:
             name = input("Nombre del grupo: \n")
             if len(name.strip()) == 0: 
-                print("Error. Codigo invalido")
+                print("Error. Nombre inválido")
                 continue
             return name 
         except Exception as e:
-            print("Error al ingresar el codigo", e)
+            print("Error al ingresar el nombre", e)
 
 def leercodigo():
     while True: 
         try:
-            cod = input("Codigo del grupo: \n")
+            cod = input("Código del grupo: \n")
             if len(cod.strip()) == 0:
-                print("Error, ingrese un codigo") 
+                print("Error, ingrese un código válido") 
                 continue
             return cod
         except Exception as e:
-            print("Error al ingresar el codigo", e)
+            print("Error al ingresar el código", e)
 
-def registroGrupos():
-    global grup  # Indicar que queremos modificar la variable global
+def registroGrupos(datos):
     print("**Registrar Grupo**")
     print("___________________")
     cod = leercodigo()
-    if not any(grupo['codigo'] == cod for grupo in grup):  # Verificar si el código ya existe
+    # Validar si el código ya existe en la variable `datos`
+    if cod not in datos:  # `datos` es el diccionario que contiene los grupos previos
         nombre = leerNombre()
         sigla = leerSgla()
 
-        datgrup = {
+        # Crear el nuevo grupo como un diccionario
+        modelDat = {
             "codigo": cod,
             "nombre": nombre,
             "sigla": sigla
         }
-        grup.append(datgrup)
-        grup.sort(key=lambda x: x['codigo'])  # Ordenar la lista por el código del grupo
+        # Agregar el nuevo grupo a `datos`, utilizando el código como clave
+        datos[cod] = modelDat  
+        print(f"{cod} registrado correctamente.")
     else:
-        print("El código ya existe.")
-    return grup
+        print(f"El código {cod} ya existe en el sistema.")
+    
+    return datos

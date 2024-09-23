@@ -1,7 +1,7 @@
 import json
 
 # Función para guardar los datos en un archivo JSON con clave dinámica
-def guardar(datosGrupos, nombre):  # La variable 'nombre' define tanto el archivo como la clave en el JSON
+def guardar(datos, nombre):  # La variable 'nombre' define tanto el archivo como la clave en el JSON
     ruta_archivo = f'SISGESA/archivo/{nombre}.json'  # Ruta dinámica basada en el nombre
 
     # Cargar los grupos actuales que ya están en el archivo JSON
@@ -10,26 +10,16 @@ def guardar(datosGrupos, nombre):  # La variable 'nombre' define tanto el archiv
             contenido = json.load(fd)  # Cargar el contenido del archivo
             
             # Verificar si lo que se carga es un diccionario
-            if isinstance(contenido, dict):
-                # Si el diccionario no tiene la clave con el nombre, la inicializamos
-                if nombre not in contenido:
-                    contenido[nombre] = []  # Inicializar si no existe
-                lista_datos = contenido[nombre]
-            else:
-                # Si lo que cargamos no es un diccionario, lo tratamos como lista
-                lista_datos = contenido
-
+            if not isinstance(contenido, dict):
+                contenido = {}  # Si no es un diccionario, inicializamos uno vacío
     except FileNotFoundError:
-        # Si no existe el archivo, se inicializa como una lista vacía o un diccionario con una clave dinámica
-        lista_datos = []
-        contenido = {nombre: lista_datos}
+        # Si no existe el archivo, se inicializa como un diccionario vacío
+        contenido = {}
 
-    # Registrar el nuevo grupo
-    nuevo_grupo = datosGrupos
-
-    # Agregar el nuevo grupo a la lista
-    lista_datos.append(nuevo_grupo)
+    # Registrar el nuevo grupo en el diccionario 'contenido'
+    contenido[f'{nombre}'] = datos
 
     # Guardar los datos actualizados en el archivo JSON con la clave dinámica
     with open(ruta_archivo, 'w') as fd:  # Guardar en el archivo JSON correspondiente
         json.dump(contenido, fd, indent=4)
+

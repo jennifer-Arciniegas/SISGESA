@@ -3,24 +3,19 @@ from modelo.R_Grupo import registroGrupos
 from modelo.R_Estudiantes import Re_estudiantes
 from persistencia.pesistenciaGuardar import guardar
 from modelo.R_Modulo import registroModulo
+from persistencia.cargar import *
 
 
-
-
-modulos = {}
-estudiante={}
-grupos= {}
-archivo ="SISGESA\archivo\cuenta.json"
 
 while True:
     opc = menu()
     match opc:
         case "a":
-            guardar(registroGrupos(),"grupos") 
+            guardar(registroGrupos(grupos),"grupos") 
         case "b":
-            guardar(registroModulo(), "Modulo")
+            guardar(registroModulo(modulo), "Modulo")
         case "c":
-            estudiante = Re_estudiantes(estudiante, archivo)
+            guardar(Re_estudiantes(estudiantes),"Estudiantes")
         case "d":
             docente = registroDocente(docente, archivo)
         case "e":
@@ -34,5 +29,3 @@ while True:
         case "i":
             print("Gracias por usar el software")
             break 
-
-
