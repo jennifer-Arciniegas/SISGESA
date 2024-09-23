@@ -19,7 +19,6 @@ while True:
             guardar(Re_estudiantes(estudiantes),"Estudiantes")
         case "d":
             guardar(registroDocentes(docentes), "Docentes")
-
         case "e":
             asistencia = registroAsistencia(asistencia, archivo)
         case "f":
