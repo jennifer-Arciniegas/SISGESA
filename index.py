@@ -4,6 +4,7 @@ from modelo.R_Estudiantes import Re_estudiantes
 from persistencia.pesistenciaGuardar import guardar
 from modelo.R_Modulo import registroModulo
 from persistencia.cargar import *
+from modelo.R_Docentes import registroDocentes
 
 
 
@@ -17,7 +18,8 @@ while True:
         case "c":
             guardar(Re_estudiantes(estudiantes),"Estudiantes")
         case "d":
-            docente = registroDocente(docente, archivo)
+            guardar(registroDocentes(docentes), "Docentes")
+
         case "e":
             asistencia = registroAsistencia(asistencia, archivo)
         case "f":
