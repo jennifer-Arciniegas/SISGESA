@@ -1,14 +1,21 @@
 {
     "grupos": {
-        "h2": {
-            "codigo": "h2",
-            "nombre": "hola",
-            "sigla": "hl"
+        "grupos": {
+            "h2": {
+                "codigo": "h2",
+                "nombre": "hola",
+                "sigla": "hl"
+            },
+            "h3": {
+                "codigo": "h3",
+                "nombre": "hoola",
+                "sigla": "hlll"
+            }
         },
-        "h3": {
-            "codigo": "h3",
-            "nombre": "hoola",
-            "sigla": "hlll"
+        "333": {
+            "codigo": "333",
+            "nombre": "j1",
+            "sigla": "j13"
         }
     }
 }
