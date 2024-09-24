@@ -28,11 +28,9 @@ if login() is not None:
             case "f":
                 consultasPorCodigo(cargar_archivo_json("asignacion"),cargar_archivo_json("Estudiantes"))
             case "g":
-                Ginformes = genInformes(Ginformes, archivo)
-            case "h":
                 cambiarpassword()
-            case "i":
+            case "h":
                 guardar(asignacion(cargar_archivo_json("Estudiantes"),cargar_archivo_json("Modulo"),cargar_archivo_json("grupos"),cargar_archivo_json("asignacion")),"asignacion")
-            case "j":
+            case "i":
                 print("Gracias por usar el software")
                 break 
