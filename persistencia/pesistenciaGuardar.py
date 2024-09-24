@@ -1,25 +1,21 @@
 import json
 
-# Función para guardar los datos en un archivo JSON con clave dinámica
-def guardar(datos, nombre):  # La variable 'nombre' define tanto el archivo como la clave en el JSON
-    ruta_archivo = f'SISGESA/archivo/{nombre}.json'  # Ruta dinámica basada en el nombre
+def guardar(datos, nombre):
+    ruta_archivo = f'SISGESA/archivo/{nombre}.json'
 
-    # Cargar los grupos actuales que ya están en el archivo JSON
+    # Cargar el archivo JSON actual si existe
     try:
-        with open(ruta_archivo, 'r') as fd:  # Abrir el archivo JSON
-            contenido = json.load(fd)  # Cargar el contenido del archivo
-            
-            # Verificar si lo que se carga es un diccionario
+        with open(ruta_archivo, 'r') as fd:
+            contenido = json.load(fd)
             if not isinstance(contenido, dict):
-                contenido = {}  # Si no es un diccionario, inicializamos uno vacío
+                contenido = {}
     except FileNotFoundError:
-        # Si no existe el archivo, se inicializa como un diccionario vacío
         contenido = {}
 
-    # Registrar el nuevo grupo en el diccionario 'contenido'
-    contenido = datos
+    # Actualizar el contenido con los nuevos datos
+    if datos:  # Solo actualiza si 'datos' no está vacío
+        contenido.update(datos)  # Usar 'update' para fusionar los datos nuevos con los existentes
 
-    # Guardar los datos actualizados en el archivo JSON con la clave dinámica
-    with open(ruta_archivo, 'w') as fd:  # Guardar en el archivo JSON correspondiente
+    # Guardar los datos actualizados en el archivo JSON
+    with open(ruta_archivo, 'w') as fd:
         json.dump(contenido, fd, indent=4)
-

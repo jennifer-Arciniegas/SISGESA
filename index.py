@@ -1,3 +1,4 @@
+
 from interfaz.menu import menu
 from modelo.R_Grupo import registroGrupos
 from modelo.R_Estudiantes import Re_estudiantes
@@ -8,6 +9,7 @@ from modelo.R_Docentes import registroDocentes
 from modelo.iniciosesion import login
 from modelo.iniciosesion import cambiarpassword
 from modelo.R_Asistencia import registroAsistencia
+from modelo.asignacion import asignacion
 
 if login() is not None:
     while True:
@@ -30,7 +32,7 @@ if login() is not None:
             case "h":
                 guardar(cambiarpassword(cuenta), "cuenta")
             case "i":
-                guardar(cambiarpassword(cuenta), "cuenta")
+                guardar(asignacion(cargar_archivo_json("Estudiantes"),cargar_archivo_json("Modulo"),cargar_archivo_json("grupos"),cargar_archivo_json("asignacion")),"asignacion")
             case "j":
                 print("Gracias por usar el software")
                 break 
