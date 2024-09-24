@@ -1,2 +1,28 @@
 {
+    "Estudiantes": {
+        "2233441122": {
+            "codigo": "2233441122",
+            "Nombre": "Andres",
+            "Sexo": "M",
+            "Edad": 16
+        },
+        "1231234567": {
+            "codigo": "1231234567",
+            "Nombre": "laia",
+            "Sexo": "F",
+            "Edad": 17
+        },
+        "3322187432": {
+            "codigo": "3322187432",
+            "Nombre": "Danna",
+            "Sexo": "F",
+            "Edad": 19
+        },
+        "8874632917": {
+            "codigo": "8874632917",
+            "Nombre": "Daniel",
+            "Sexo": "M",
+            "Edad": 18
+        }
+    }
 }
