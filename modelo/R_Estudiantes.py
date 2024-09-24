@@ -63,7 +63,8 @@ def Re_estudiantes(datos):
         datos[cod] =datEstudiante
         print(f"{cod} registrado correctamente.")
     else:
-        print(f"El código {cod} ya existe en el sistema.")
+        print(f"El código {cod},
+               ya existe en el sistema.")
     
     return datos
 

@@ -30,7 +30,8 @@ if login() is not None:
             case "g":
                 cambiarpassword()
             case "h":
-                guardar(asignacion(cargar_archivo_json("Estudiantes"),cargar_archivo_json("Modulo"),cargar_archivo_json("grupos"),cargar_archivo_json("asignacion")),"asignacion")
+                guardar(asignacion(cargar_archivo_json("Estudiantes"),cargar_archivo_json("Modulo"),cargar_archivo_json("grupos"),
+                                   cargar_archivo_json("asignacion")),"asignacion")
             case "i":
                 print("Gracias por usar el software")
                 break 
