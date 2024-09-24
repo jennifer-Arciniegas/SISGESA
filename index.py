@@ -1,4 +1,4 @@
-
+from modelo.consultaPorCodigo import consultasPorCodigo
 from interfaz.menu import menu
 from modelo.R_Grupo import registroGrupos
 from modelo.R_Estudiantes import Re_estudiantes
@@ -26,7 +26,7 @@ if login() is not None:
             case "e":
                 guardar(registroAsistencia(cargar_archivo_json("Estudiantes"),cargar_archivo_json("Modulo"),cargar_archivo_json("asistencia")),"asistencia")
             case "f":
-                consultaIfo = consultaInfor(consultaIfo, archivo)
+                consultasPorCodigo(cargar_archivo_json("asignacion"),cargar_archivo_json("Estudiantes"))
             case "g":
                 Ginformes = genInformes(Ginformes, archivo)
             case "h":
