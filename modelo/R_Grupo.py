@@ -34,6 +34,7 @@ def leercodigo():
 def registroGrupos(datos):
     print("**Registrar Grupo**")
     print("___________________")
+    print(datos)
     cod = leercodigo()
     # Validar si el código ya existe en la variable `datos`
     if cod not in datos:  # `datos` es el diccionario que contiene los grupos previos

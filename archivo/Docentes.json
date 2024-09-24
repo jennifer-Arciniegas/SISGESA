@@ -1,16 +1,14 @@
 {
-    "Docentes": {
-        "1234567890": {
-            "codigo": "1234567890",
-            "nombre": "Martha Sanchez"
-        },
-        "2345678901": {
-            "codigo": "2345678901",
-            "nombre": "Carlos Bonilla"
-        },
-        "3456789012": {
-            "codigo": "3456789012",
-            "nombre": "David Loaiza"
-        }
+    "1234567890": {
+        "codigo": "1234567890",
+        "nombre": "Martha Sanchez"
+    },
+    "2345678901": {
+        "codigo": "2345678901",
+        "nombre": "Carlos Bonilla"
+    },
+    "3456789012": {
+        "codigo": "3456789012",
+        "nombre": "David Loaiza"
     }
 }

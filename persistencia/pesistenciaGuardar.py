@@ -17,7 +17,7 @@ def guardar(datos, nombre):  # La variable 'nombre' define tanto el archivo como
         contenido = {}
 
     # Registrar el nuevo grupo en el diccionario 'contenido'
-    contenido[f'{nombre}'] = datos
+    contenido = datos
 
     # Guardar los datos actualizados en el archivo JSON con la clave dinámica
     with open(ruta_archivo, 'w') as fd:  # Guardar en el archivo JSON correspondiente

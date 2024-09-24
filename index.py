@@ -13,13 +13,13 @@ if login() is not None:
         opc = menu()
         match opc:
             case "a":
-                guardar(registroGrupos(grupos),"grupos") 
+                guardar(registroGrupos(cargar_archivo_json("grupos")),"grupos") 
             case "b":
-                guardar(registroModulo(modulo), "Modulo")
+                guardar(registroModulo(cargar_archivo_json("Modulo")), "Modulo")
             case "c":
-                guardar(Re_estudiantes(estudiantes),"Estudiantes")
+                guardar(Re_estudiantes(cargar_archivo_json("Estudiantes")),"Estudiantes")
             case "d":
-                guardar(registroDocentes(docentes), "Docentes")
+                guardar(registroDocentes(cargar_archivo_json("Docentes")), "Docentes")
             case "e":
                 asistencia = registroAsistencia(asistencia, archivo)
             case "f":
