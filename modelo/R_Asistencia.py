@@ -1,5 +1,5 @@
 def registroDocentes(estudiantes, modulos, datos):
-    print("**Registrar Docente**")
+    print("**Registrar *")
     print("___________________")
     codEstudiante = leercodigoEstudiante()
     codModulo = leerCodigoModulo()
