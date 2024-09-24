@@ -48,10 +48,29 @@ def login(): #funcion para cargar credenciales almacenadas
         userpassword = leerPassword()
         if userpassword == administrador.get('password'):
             print("contraseña correcta")
+            return administrador
         else: 
             print("la contraceña es incorrecta")
+            return None
   else:
     print("el usuario es incorrecto")
+    return None
+
+
+def cambiarpassword():
+    try:
+        user = login()
+        if user is not None:
+            newPassword = leerPassword()
+            user["password"] = newPassword
+            administrados = consultaruser
+        with open("SISGESA/archivo/cuenta.json", "w") as archivo:
+            json.dump({"administrados": administrados}, archivo, ident= 4 )
+            print("la contraseña se cambio correctamente")
+    except Exception as e:
+         print("no se puedo modificar la contraceña")
+
+
 
 
 
