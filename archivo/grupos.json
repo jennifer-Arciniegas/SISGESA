@@ -1,2 +1,41 @@
 {
+    "grupos": {
+        "grupos": {
+            "A1": {
+                "codigo": "A1",
+                "nombre": "Avanzados Tarde",
+                "sigla": "AMA/bin/python3 /home/camper/proyecto/SISGESA/index.py"
+            }
+        },
+        "A1": {
+            "codigo": "A1",
+            "nombre": "Avanzados Ma\u00f1ana",
+            "sigla": "AMA"
+        },
+        "B1": {
+            "codigo": "B1",
+            "nombre": "Intermedio Ma\u00f1ana",
+            "sigla": "BMI"
+        },
+        "A2": {
+            "codigo": "A2",
+            "nombre": "Avanzados Tarde",
+            "sigla": "ATA"
+        },
+        "B2": {
+            "codigo": "B2",
+            "nombre": "Intermedio Tarde",
+            "sigla": "BTI"
+        },
+        "C1": {
+            "codigo": "C1",
+            "nombre": "Basico Ma\u00f1ana",
+            "sigla": "CMN"
+        },
+        "C2": {
+            "codigo": "C2",
+            "nombre": "Basico Tarde",
+            "sigla": "CTB"
+        }
+    }
 }

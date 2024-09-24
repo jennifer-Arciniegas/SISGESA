@@ -1,2 +1,34 @@
 {
-     }
+    "Modulo": {
+        "CN1": {
+            "codigo": "CN1",
+            "nombre": "Ciencias Naturales",
+            "Duracion": 10
+        },
+        "CS2": {
+            "codigo": "CS2",
+            "nombre": "Ciencias Sociales",
+            "Duracion": 10
+        },
+        "HG1": {
+            "codigo": "HG1",
+            "nombre": "Historia general",
+            "Duracion": 10
+        },
+        "HD2": {
+            "codigo": "HD2",
+            "nombre": "Historia deporte",
+            "Duracion": 5
+        },
+        "M1": {
+            "codigo": "M1",
+            "nombre": "Musica",
+            "Duracion": 5
+        },
+        "C1": {
+            "codigo": "C1",
+            "nombre": "Calculo",
+            "Duracion": 5
+        }
+    }
+}
