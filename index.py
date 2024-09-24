@@ -30,7 +30,7 @@ if login() is not None:
             case "g":
                 Ginformes = genInformes(Ginformes, archivo)
             case "h":
-                guardar(cambiarpassword(cuenta), "cuenta")
+                cambiarpassword()
             case "i":
                 guardar(asignacion(cargar_archivo_json("Estudiantes"),cargar_archivo_json("Modulo"),cargar_archivo_json("grupos"),cargar_archivo_json("asignacion")),"asignacion")
             case "j":

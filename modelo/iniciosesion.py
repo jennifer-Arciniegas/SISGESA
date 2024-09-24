@@ -58,17 +58,16 @@ def login(): #funcion para cargar credenciales almacenadas
 
 
 def cambiarpassword():
-    try:
-        user = login()
-        if user is not None:
-            newPassword = leerPassword()
-            user["password"] = newPassword
-            administrados = consultaruser
-        with open("SISGESA/archivo/cuenta.json", "w") as archivo:
-            json.dump({"administrados": administrados}, archivo, ident= 4 )
-            print("la contraseña se cambio correctamente")
-    except Exception as e:
-         print("no se puedo modificar la contraceña")
+    user = leerUser()
+    with open ("SISGESA/archivo/cuenta.json", "r") as archivo:
+        dato = json.load(archivo)
+    newPass = input("ingrese la nueva contraseña:\n")
+    dato["administrados"]["password"] = newPass
+    with open("SISGESA/archivo/cuenta.json", 'w') as archivo:
+        json.dump(dato, archivo, indent=4)
+    print("contraseña actualizada")
+
+
 
 
 
