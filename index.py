@@ -7,6 +7,7 @@ from persistencia.cargar import *
 from modelo.R_Docentes import registroDocentes
 from modelo.iniciosesion import login
 from modelo.iniciosesion import cambiarpassword
+from modelo.R_Asistencia import registroAsistencia
 
 if login() is not None:
     while True:
@@ -21,7 +22,7 @@ if login() is not None:
             case "d":
                 guardar(registroDocentes(cargar_archivo_json("Docentes")), "Docentes")
             case "e":
-                asistencia = registroAsistencia(asistencia, archivo)
+                guardar(registroAsistencia(cargar_archivo_json("Estudiantes"),cargar_archivo_json("Modulo"),cargar_archivo_json("asistencia")),"asistencia")
             case "f":
                 consultaIfo = consultaInfor(consultaIfo, archivo)
             case "g":
@@ -29,5 +30,7 @@ if login() is not None:
             case "h":
                 guardar(cambiarpassword(cuenta), "cuenta")
             case "i":
+                guardar(cambiarpassword(cuenta), "cuenta")
+            case "j":
                 print("Gracias por usar el software")
                 break 

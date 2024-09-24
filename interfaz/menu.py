@@ -11,11 +11,12 @@ def menu():
         print("f. Consultas de información.")
         print("g. Generación de informes.")
         print("h. Cambio de contraseña.")
-        print("i. Salida del sistema.")
+        print("i. asignacion.")
+        print("j. Salida del sistema.")
 
         print(">> Ingresar a opcion: ", end="")
         try:
-            opciones = ["a", "b", "c","d","e","f", "g", "h", "i"]
+            opciones = ["a", "b", "c","d","e","f", "g", "h", "i", "j"]
             opc = input().lower()
             if opc not in opciones:
                 print("Error opcion invalida")
