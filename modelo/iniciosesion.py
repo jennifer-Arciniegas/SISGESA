@@ -4,7 +4,7 @@ import json
 def consultaruser():
     with open ("SISGESA/archivo/cuenta.json", "r") as archivo:
         dato = json.load(archivo)
-        return dato.get('user')
+        return dato.get("administrados")
     
 
 def consultarclave():
@@ -35,10 +35,7 @@ def leerUser():
       return user
     except Exception as e:
          print("Error al ingresar usuario" + e) 
-
-
         
-
 
 
 
@@ -50,12 +47,12 @@ def login(): #funcion para cargar credenciales almacenadas
   if user == administrador.get('user'):
         userpassword = leerPassword()
         if userpassword == administrador.get('password'):
-            return True
+            print("contraseña correcta")
         else: 
             print("la contraceña es incorrecta")
   else:
     print("el usuario es incorrecto")
-    return False
+
 
 
 

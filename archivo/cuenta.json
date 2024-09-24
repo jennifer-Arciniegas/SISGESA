@@ -1,3 +1,6 @@
-{ "administrados" : { "user": "admin", "password": "SISGESA"}
+{ "administrados" : { 
+    "user": "admin",
+     "password": "SISGESA"
+    }
 
 }

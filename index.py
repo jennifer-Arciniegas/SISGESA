@@ -7,26 +7,26 @@ from persistencia.cargar import *
 from modelo.R_Docentes import registroDocentes
 from modelo.iniciosesion import login
 
-while login() is True:
-    while True:
-        opc = menu()
-        match opc:
-            case "a":
-                guardar(registroGrupos(grupos),"grupos") 
-            case "b":
-                guardar(registroModulo(modulo), "Modulo")
-            case "c":
-                guardar(Re_estudiantes(estudiantes),"Estudiantes")
-            case "d":
-                guardar(registroDocentes(docentes), "Docentes")
-            case "e":
-                asistencia = registroAsistencia(asistencia, archivo)
-            case "f":
-                consultaIfo = consultaInfor(consultaIfo, archivo)
-            case "g":
-                Ginformes = genInformes(Ginformes, archivo)
-            case "h":
-                cambio_clave = cambioClave(cambio_clave, archivo)
-            case "i":
-                print("Gracias por usar el software")
-                break 
+login()
+while True:
+    opc = menu()
+    match opc:
+        case "a":
+            guardar(registroGrupos(grupos),"grupos") 
+        case "b":
+            guardar(registroModulo(modulo), "Modulo")
+        case "c":
+            guardar(Re_estudiantes(estudiantes),"Estudiantes")
+        case "d":
+            guardar(registroDocentes(docentes), "Docentes")
+        case "e":
+            asistencia = registroAsistencia(asistencia, archivo)
+        case "f":
+            consultaIfo = consultaInfor(consultaIfo, archivo)
+        case "g":
+            Ginformes = genInformes(Ginformes, archivo)
+        case "h":
+            cambio_clave = cambioClave(cambio_clave, archivo)
+        case "i":
+            print("Gracias por usar el software")
+            break 
