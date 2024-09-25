@@ -24,8 +24,8 @@ def registroDocentes(datos):
     print("**Registrar Docente**")
     print("___________________")
     cod = leercodigo()
-    # Validar si el código ya existe en la variable `datos`
-    if cod not in datos:  # `datos` es el diccionario que contiene los grupos previos
+  
+    if cod not in datos: 
         nombre = leerNombre()
         
 
@@ -35,7 +35,7 @@ def registroDocentes(datos):
             "nombre": nombre
             
         }
-        # Agregar el nuevo grupo a `datos`, utilizando el código como clave
+        # Agregar el nuevo grupo a datos, utilizando el código como clave
         datos[cod] = modelDat  
         print(f"{cod} registrado correctamente.")
     else:

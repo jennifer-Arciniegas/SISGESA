@@ -47,7 +47,7 @@ def registroGrupos(datos):
             "nombre": nombre,
             "sigla": sigla
         }
-        # Agregar el nuevo grupo a `datos`, utilizando el código como clave
+        # Agregar el nuevo grupo a datos, utilizando el código como clave
         datos[cod] = modelDat  
         print(f"{cod} registrado correctamente.")
     else:
