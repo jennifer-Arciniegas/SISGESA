@@ -32,9 +32,9 @@ def leercodigo():
             print("Error al ingresar el código", e)
 
 def registroGrupos(datos):
+    print("___________________")
     print("**Registrar Grupo**")
     print("___________________")
-    print(datos)
     cod = leercodigo()
     # Validar si el código ya existe en la variable `datos`
     if cod not in datos:  # `datos` es el diccionario que contiene los grupos previos
