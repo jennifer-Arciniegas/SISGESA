@@ -13,5 +13,10 @@
         "codigo": "ertyui",
         "nombre": "4448343",
         "sigla": "yui"
+    },
+    "543": {
+        "codigo": "543",
+        "nombre": "NUEVO",
+        "sigla": "new"
     }
 }

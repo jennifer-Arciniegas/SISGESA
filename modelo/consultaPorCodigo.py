@@ -1,5 +1,5 @@
 def buscarEstudiantePorGrupo(asignacion):
-    codGrupo = input("Ingrese el código del grupo: ")  # Usar input para capturar el valor
+    codGrupo = input("Ingrese el código del grupo: \n").upper()  # Usar input para capturar el valor
     estudiantes_en_grupo = []
     for codigo, info in asignacion.items():
         if info["Grupo"] == codGrupo:
@@ -16,7 +16,7 @@ def consultarEstudiantePorGrupo(asignacion, estudiantes):
         else:
             print("No hay estudiantes")
 def buscarEstudiantePorModulo(asignacion):
-    codModulo = input("Ingrese el codigo del modulo: ")
+    codModulo = input("Ingrese el codigo del modulo: \n").upper()
     estudiante_en_modulo =[]
     for codigo, info in asignacion.items():
         # Verificar si el módulo está en la lista de módulos asignados al estudiante
@@ -27,7 +27,6 @@ def buscarEstudiantePorModulo(asignacion):
         print("No hay estudiantes asignados a este módulo")
     
     return estudiante_en_modulo
-
 def consultarEstudiantePorModulo(asignacion, estudiantes):
     codEstudiantes = buscarEstudiantePorModulo(asignacion)
     for codigo in codEstudiantes:
@@ -38,6 +37,7 @@ def consultarEstudiantePorModulo(asignacion, estudiantes):
 
 def consultasPorCodigo(asignacion, estudiantes):
     while True:
+        
         op = int(input("Consultas:\n\t1. Estudiantes por Grupo:\n\t2. Estudiantes por Modulo\n\t3. Salir\n"))
         if op == 1:
             consultarEstudiantePorGrupo(asignacion, estudiantes)

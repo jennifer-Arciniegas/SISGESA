@@ -6,14 +6,11 @@ def consultaruser():
         dato = json.load(archivo)
         return dato.get("administrados")
     
-
 def consultarclave():
     with open ("SISGESA/archivo/cuenta.json", "r") as archivo:
         dato = json.load(archivo)
         return dato.get('password')
       
-
-
 def leerPassword():
     while True:
         password = input("Ingrese la contraseña: \n")
@@ -24,9 +21,7 @@ def leerPassword():
             return password
         except Exception as e:
             print("Error al ingresar la contraseña" + e)
-            
-            
-
+                      
 def leerUser():
     try:
       user = input("Ingrese su usuario: \n")
@@ -36,8 +31,6 @@ def leerUser():
       return user
     except Exception as e:
          print("Error al ingresar usuario" + e) 
-        
-
 
 
 def login(): #funcion para cargar credenciales almacenadas

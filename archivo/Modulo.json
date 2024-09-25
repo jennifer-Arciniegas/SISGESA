@@ -1,5 +1,4 @@
 {
-
     "CN1": {
         "codigo": "CN1",
         "nombre": "Ciencias Naturales",
@@ -29,5 +28,10 @@
         "codigo": "C1",
         "nombre": "Calculo",
         "Duracion": 5
+    },
+    "213": {
+        "codigo": "213",
+        "nombre": "prueba",
+        "Duracion": 3
     }
 }
